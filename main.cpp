@@ -65,7 +65,7 @@ void background()
     glEnd();
 }
 
-#Perubahan Anantha Tisa Audrian (E1E119019)
+//Perubahan Anantha Tisa Audrian (E1E119019)
 void orbit()
 {
 glColor3f(0.5,0.5,0.5);
