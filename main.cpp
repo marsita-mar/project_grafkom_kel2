@@ -64,3 +64,28 @@ void background()
       glVertex3f(-1.00,-1.00,1);
     glEnd();
 }
+
+#Perubahan Anantha Tisa Audrian (E1E119019)
+void orbit()
+{
+glColor3f(0.5,0.5,0.5);
+
+
+int i=0;
+for(i=0;i<8;i++){
+glPushMatrix();
+if(i==5)
+{glRotatef(45,1.0,0.0,0.0);}
+else
+{glRotatef(63,1.0,0.0,0.0);}
+glScalef(sc[i],sc[i],sc[i]);
+glBegin(GL_POINTS);
+double ang1=0.0;
+  int i=0;
+  for(i=0;i<300;i++)
+  {glVertex2d(cos(ang1),sin(ang1));
+   ang1+=ang;  }
+glEnd();
+glPopMatrix();
+}
+}
