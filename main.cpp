@@ -181,3 +181,46 @@ void draw(void)
              glutSolidSphere(0.5,50,50);
            glPopMatrix();//moon made
        glPopMatrix();
+       glPushMatrix();
+         glRotatef(angleSaturn,0.0,1.0,-1.0);
+         glTranslatef(-5.0,0.0,0.0);
+         glColor3f(0.9,0.0,0.0);
+         glScalef(0.4,0.4,0.4);
+         glutSolidSphere(1,50,50);
+         glPushMatrix();
+             glRotatef(45,1.0,0.0,0.0);
+             glPointSize(3);
+             glColor3f(5.0,3.0,1.0);
+             glScalef(1.2,1.2,1.2);
+             glBegin(GL_POINTS);
+                double ang1=0.0;
+                i=0;
+                for(i=0;i<50;i++)
+                  {glVertex2d(cos(ang1),sin(ang1));
+                   ang1+=angular;  }
+            glEnd();
+
+            glPointSize(2);
+           glPopMatrix();//ring made
+       glPopMatrix();
+
+       glPushMatrix();
+         glRotatef(angleUranus,0.0,1.0,-0.5);
+         glTranslatef(5.2,0.0,0.0);
+         glColor3f(0.0,0.5,0.9);
+         glScalef(0.23,0.23,0.23);
+         glutSolidSphere(1,50,50);
+       glPopMatrix();
+
+       glPushMatrix();
+         glRotatef(angleNeptune,0.0,1.0,-0.5);
+         glTranslatef(-5.7,0.0,0.0);
+         glColor3f(0.0,0.0,0.9);
+         glScalef(0.2,0.2,0.2);
+         glutSolidSphere(1,50,50);
+       glPopMatrix();
+
+
+glPopMatrix();
+     glFlush();
+}
