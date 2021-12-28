@@ -243,3 +243,47 @@ if(angleMercury>360){
 angleVenus+=0.9;
 if(angleVenus>360){
     angleVenus-=360;}
+angleMars+=0.5;
+if(angleMars>360){
+    angleMars-=360;}
+angleJupiter+=0.2;
+if(angleJupiter>360){
+    angleJupiter-=360;}
+angleSaturn+=0.1;
+if(angleSaturn>360){
+    angleSaturn-=360;}
+
+
+angleUranus+=0.05;
+if(angleUranus>360){
+    angleUranus-=360;}
+
+
+angleNeptune+=0.02;
+if(angleNeptune>360){
+    angleNeptune-=360;}
+
+
+angleAstroid+=0.002;
+if(angleAstroid>360){
+    angleAstroid-=360;}
+
+
+glutPostRedisplay();
+glutTimerFunc(20,update,0);
+}
+
+int main(int argc, char **argv)
+{
+    glutInit(&argc,argv);
+    glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
+    glutInitWindowPosition(0,0);
+    glutInitWindowSize(700,700);
+    glutCreateWindow("Solar System");
+    initLighting();
+    myinit();
+    glutDisplayFunc(draw);
+    glutTimerFunc(25,update,0);
+    glutMainLoop();
+    return 0;
+}
