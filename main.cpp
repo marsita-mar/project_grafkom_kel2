@@ -89,3 +89,30 @@ glEnd();
 glPopMatrix();
 }
 }
+
+void draw(void)
+{
+    glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
+    background();
+    orbit();
+    glLoadIdentity();
+    glPushMatrix();
+    glEnable(GL_DEPTH_TEST);
+   glEnable(GL_COLOR_MATERIAL);
+       glPushMatrix();
+       glColor3f(0.7,0.5,0.0);
+       glScalef(sx,sy,sz);
+        glLightfv(GL_LIGHT7,GL_POSITION,qPos);
+       glMaterialfv(GL_FRONT_AND_BACK,GL_EMISSION,yellow);
+       glutSolidSphere(1,50,50);
+       glMaterialfv(GL_FRONT_AND_BACK,GL_EMISSION,black);
+       glPopMatrix();
+
+       glScalef(0.2,0.2,0.2);
+       glPushMatrix();
+         glRotatef(angleMercury,0.0,1.0,-0.5);
+         glTranslatef(1.5,0.0,0.0);
+         glColor3f(1.0,0.9,0.0);
+         glScalef(0.08,0.08,0.08);
+         glutSolidSphere(1,50,50);
+       glPopMatrix();
