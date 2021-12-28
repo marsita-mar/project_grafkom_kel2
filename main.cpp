@@ -224,3 +224,22 @@ void draw(void)
 glPopMatrix();
      glFlush();
 }
+void update(int value){
+
+if((angleMoon>=0 && angleMoon<180) )
+{sx-=0.0003;sy-=0.0003;sz-=0.0003;}
+else{sx+=0.0003;sy+=0.0003;sz+=0.0003;}
+
+
+angleMoon+=2;
+if(angleMoon>360){
+    angleMoon-=360;}
+angleEarth+=0.7;
+if(angleEarth>360){
+    angleEarth-=360;}
+angleMercury+=2;
+if(angleMercury>360){
+    angleMercury-=360;}
+angleVenus+=0.9;
+if(angleVenus>360){
+    angleVenus-=360;}
