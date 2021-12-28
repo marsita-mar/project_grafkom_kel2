@@ -65,7 +65,6 @@ void background()
     glEnd();
 }
 
-//Perubahan Anantha Tisa Audrian (E1E119019)
 void orbit()
 {
 glColor3f(0.5,0.5,0.5);
@@ -146,4 +145,39 @@ void draw(void)
          glColor3f(0.05,0.05,0.01);
          glScalef(0.17,0.17,0.17);
          glutSolidSphere(1,50,50);
+       glPopMatrix();
+
+       glPushMatrix();
+             glColor3f(3.30,3.30,3.30);
+             glRotatef(63,1.0,0.0,0.0);
+             int j=0,i=0,div=90;float siz=2;
+             float scl[4]={3.3,3.4,3.35,3.2};
+             for(j=0;j<4;j++)
+             {glPushMatrix();siz-=0.3;
+             glPointSize(siz);
+             glScalef(scl[j],scl[j],scl[j]);
+             glBegin(GL_POINTS);
+                double ang1=0.0 -angleAstroid,a=(2*PI)/div;
+                for(i=0;i<div;i++)
+                  {glVertex2d(cos(ang1),sin(ang1));
+                   ang1+=a;  }
+                   div+=10;
+            glEnd();
+            glPopMatrix();
+             }
+           glPopMatrix();//astroid made
+
+       glPushMatrix();
+         glRotatef(angleJupiter,0.0,1.0,-0.5);
+         glTranslatef(-4.0,0.0,0.0);
+         glColor3f(0.4,0.2,0.0);
+         glScalef(0.5,0.5,0.5);
+         glutSolidSphere(1,50,50);
+         glPushMatrix();
+             glRotatef(angleMoon,1.0,-0.5,0.0);
+             glTranslatef(0.0,0,1.1);
+             glColor3f(1.0,1.0,1.0);
+             glScalef(0.1,0.1,0.1);
+             glutSolidSphere(0.5,50,50);
+           glPopMatrix();//moon made
        glPopMatrix();
