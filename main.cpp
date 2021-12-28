@@ -116,3 +116,34 @@ void draw(void)
          glScalef(0.08,0.08,0.08);
          glutSolidSphere(1,50,50);
        glPopMatrix();
+
+       glPushMatrix();
+         glRotatef(angleVenus,0.0,1.0,-0.5);
+         glTranslatef(2.0,0.0,0.0);
+         glColor3f(0.9,0.1,0.0);
+         glScalef(0.1,0.1,0.1);
+         glutSolidSphere(1,50,50);
+       glPopMatrix();
+
+       glPushMatrix();
+         glRotatef(angleEarth,0.0,1.0,-0.5);
+         glTranslatef(2.5,0.0,0.0);
+         glColor3f(0.0,0.1,0.7);
+         glScalef(0.23,0.23,0.23);
+         glutSolidSphere(1,50,50);
+            glPushMatrix();
+             glRotatef(angleMoon,0.0,0.1,0.05);
+             glTranslatef(1.3,0.0,0.0);
+             glColor3f(1.0,1.0,1.0);
+             glScalef(0.5,0.5,0.5);
+             glutSolidSphere(0.5,50,50);
+           glPopMatrix();//moon made
+       glPopMatrix();//earth made
+
+       glPushMatrix();
+         glRotatef(angleMars,0.0,1.0,-0.5);
+         glTranslatef(-3.0,0.0,0.0);
+         glColor3f(0.05,0.05,0.01);
+         glScalef(0.17,0.17,0.17);
+         glutSolidSphere(1,50,50);
+       glPopMatrix();
