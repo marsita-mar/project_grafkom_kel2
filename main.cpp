@@ -275,7 +275,7 @@ glutTimerFunc(20,update,0);
 
 int main(int argc, char **argv)
 {
-    glutInit(&argc,argv);
+    glutInit(&argc,argv);	//tess 456
     glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
     glutInitWindowPosition(0,0);
     glutInitWindowSize(700,700);
