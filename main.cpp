@@ -1,4 +1,4 @@
-//Marsita Harim dengan NIM E1E120014
+//Marsita Harim; NIM : E1E120014
 #include<stdio.h>
 #include<stdio.h>
 #include<stdlib.h>
