@@ -7,7 +7,7 @@
 #include<time.h>
 #include<windows.h>
 #define PI 3.14
-
+//perubqhqn winel
 //nabila
 float angleMoon=0.0, angleEarth=0.0,angleAstroid=0.0,
                   angleMars=0.0,
